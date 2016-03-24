@@ -1,0 +1,41 @@
+﻿@model IEnumerable<HealthApp.Models.ReadingIndexViewModel>
+
+<h2>ViewReadings</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Date of Reading</td>
+            <td>Weight</td>
+            <td>BMI</td>
+            <td>Total Cholesterol</td>
+            <td>LDL Cholesterol</td>
+            <td>HDL Cholesterol</td>
+            <td>Triglycerides</td>
+            <td>Glucose</td>
+            <td>Systolic Blood Pressure</td>
+            <td>Diastolic Blood Pressure</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.reading_date</td>
+                <td>@r.weight</td>
+                <td>@r.bmi</td>
+                <td>@r.tc</td>
+                <td>@r.ldl</td>
+                <td>@r.hdl</td>
+                <td>@r.triglycerides</td>
+                <td>@r.glucose</td>
+                <td>@r.sbp</td>
+                <td>@r.dbp</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Person", new { @class = "btn btn-primary" })
+</div>
+

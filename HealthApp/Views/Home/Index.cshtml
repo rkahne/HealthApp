@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Robert Kahne's Code Louisville .NET Application</h1>
+    <p class="lead">For this cohort of Code Louisville, I made an application for care providers to track their patient's biometrics.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h2>What It Does</h2>
+        <p>
+           This CRUD application allows a care provider to register patients, and then record over time how their biometrics have changed.  There are lots of ways to extend this applications, but this is a pretty good start.
+        </p>
+    </div>
+</div>
+<div class="col-md-8 col-md-offset-2">
+    @Html.ActionLink("Go to Dashboard", "Index", "Person", null, new { @class = "btn btn-primary" })
+</div>

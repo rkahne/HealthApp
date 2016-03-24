@@ -1,0 +1,81 @@
+﻿@model HealthApp.Models.PersonAddReadingViewModel
+
+<h2>Add a Reading</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.person_id)
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m => m.reading_date)</td>
+            <td>
+                @Html.TextBoxFor(m => m.reading_date)
+                @Html.ValidationMessageFor(m => m.reading_date)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.weight)</td>
+            <td>
+                @Html.TextBoxFor(m => m.weight)
+                @Html.ValidationMessageFor(m => m.weight)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.sbp)</td>
+            <td>
+                @Html.TextBoxFor(m => m.sbp)
+                @Html.ValidationMessageFor(m => m.sbp)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.dbp)</td>
+            <td>
+                @Html.TextBoxFor(m => m.dbp)
+                @Html.ValidationMessageFor(m => m.dbp)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.tc)</td>
+            <td>
+                @Html.TextBoxFor(m => m.tc)
+                @Html.ValidationMessageFor(m => m.tc)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.hdl)</td>
+            <td>
+                @Html.TextBoxFor(m => m.hdl)
+                @Html.ValidationMessageFor(m => m.hdl)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.ldl)</td>
+            <td>
+                @Html.TextBoxFor(m => m.ldl)
+                @Html.ValidationMessageFor(m => m.ldl)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.triglycerides)</td>
+            <td>
+                @Html.TextBoxFor(m => m.triglycerides)
+                @Html.ValidationMessageFor(m => m.triglycerides)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.glucose)</td>
+            <td>
+                @Html.TextBoxFor(m => m.glucose)
+                @Html.ValidationMessageFor(m => m.glucose)
+            </td>
+        </tr>
+    </table>
+
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Person", new { @class = "btn btn-primary" })
+</div>

@@ -1,0 +1,45 @@
+﻿@model HealthApp.Models.PersonCreateViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add a Patient</h2>
+@using (Html.BeginForm()){
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m => m.first_name)</td>
+            <td>
+                @Html.TextBoxFor(m => m.first_name)
+                @Html.ValidationMessageFor(m => m.first_name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.last_name)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.last_name)
+                @Html.ValidationMessageFor(m => m.last_name)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.dob)</td>
+            <td>
+                @Html.TextBoxFor(m => m.dob)
+                @Html.ValidationMessageFor(m => m.dob)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.height)</td>
+            <td>
+                @Html.TextBoxFor(m => m.height)
+                @Html.ValidationMessageFor(m => m.height)
+            </td>
+        </tr>
+    </table>
+    
+    
+<button class="btn btn-primary" type="submit">Register</button>
+@Html.ActionLink("Back to Dashboard", "Index", "Person", null, new { @class = "btn btn-primary" })
+}
+
